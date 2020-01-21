@@ -1,0 +1,15 @@
+.def{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-style: normal
+    ;
+    font: outline;
+    font-family: Arial, Helvetica, sans-serif;
+    size: 500px;
+    text-shadow: slategray;
+}
+.validation{
+    color: red;
+
+}
