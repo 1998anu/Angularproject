@@ -1,1 +1,27 @@
 <p>contact works!</p>
+<div class=container>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of mydata">
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.gender}}</td>
+                <td>{{data.pswd}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-success" routerLink="/register">Register</button>
+    </div>
+
+</div>

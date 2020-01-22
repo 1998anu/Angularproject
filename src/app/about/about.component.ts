@@ -18,7 +18,7 @@ export class AboutComponent implements OnInit {
   }
   getId(){
     this.id = localStorage.getItem("ID");
-    //console.log("my id....",this.id);
+    console.log("my id....",this.id);
     
   }
   logout(){

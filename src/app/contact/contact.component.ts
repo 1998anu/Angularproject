@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from '../dataservice.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+ mydata:any;
+ name:any;
+  gender: any;
+  email: any;
+  pswd: any;
+  constructor(
+    private dataservice:DataserviceService,
+  ) { }
 
   ngOnInit() {
+    this.getdata();
+  }
+  getdata(){
+    this.dataservice.currentMessage.subscribe(data=>{
+      this.mydata=JSON.parse(data);
+      console.log("data coming...",this.mydata);
+      
+    })
   }
 
 }
